@@ -1,0 +1,113 @@
+What is Polymorphism? Types of Polymorphism? Difference between Overriding and Overloading?
+
+
+What is Polymorphism?
+
+Definition:
+
+Polymorphism is a Latin word which means "Many Forms".
+It is one the concept of Oops(Object Oriented Programming):,"(Inheritance, Polymorphism, Abstraction, Encapsulation)"
+in java which we can perform a single action in different ways.
+
+What do we need to apply Polymorphism?
+
+1. Inheritance
+2. Method Overriding
+3. Type Casting
+4. Loops
+5. Arrays
+6. Same parent class with multiple child classes.
+
+__________________________________________________________________________________________________________________
+Types of Polymorphism?
+
+There are two types of Polymorphism supported in JAVA.
+
+1. Compile-time (Static) Polymorphism
+2. Runtime (Dynamic) Polymorphism
+
+____________________________________________________________________________________________________________________
+Difference between Overloading and Overriding?
+
+
+Overloading vs. Overriding in Java:
+
+1. Definition:
+
+Overloading: It refers to the ability to define multiple methods in the same class with the same name but different parameters.
+Overriding: It refers to the ability of a subclass to provide a specific implementation for a method
+that is already defined in its superclass.
+
+2. Purpose:
+
+Overloading:
+To provide multiple methods with the same name but different functionalities based
+on the type or number of parameters, enhancing code readability and flexibility.
+Overriding:
+To customize or extend the behavior of a superclass method in a subclass,
+promoting polymorphism and allowing the specific implementation of a method in the subclass.
+
+3. Involvement:
+
+Overloading: Involves multiple methods within the same class, and it is determined
+at compile-time (compile-time polymorphism or static polymorphism).
+Overriding:
+Involves a method in a subclass providing a specific implementation for a method in its
+superclass, and it is determined at runtime (runtime polymorphism or dynamic polymorphism).
+
+4. Method Signature:
+
+Overloading: Methods must have the same name but a different number or type of parameters.
+Overriding: Methods must have the same name, return type, and parameters.
+
+5. Access Modifiers:
+
+Overloading: Access modifiers can be the same or different.
+Overriding: The overriding method cannot have a more restrictive access modifier than the overridden method.
+
+6. Use of @Override Annotation:
+
+Overloading: Not applicable; the @Override annotation is not used.
+Overriding: It is recommended to use the @Override annotation to indicate that a method is intended to override a superclass method.
+Example:
+
+class Animal {
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    // Overriding the makeSound method
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks");
+    }
+
+    // Overloading the makeSound method
+    void makeSound(int volume) {
+        System.out.println("Dog barks with volume: " + volume);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Dog();  // Polymorphism: reference of superclass, object of subclass
+        animal.makeSound();        // Calls the overridden method in the Dog class
+        // animal.makeSound(5);    // This would result in a compilation error as Animal class doesn't have makeSound(int volume)
+    }
+}
+__________________________________________________________________________________________________________
+Note:
+In the example above, makeSound in the Dog class overrides the method in the Animal
+class, and it also overloads the method by adding a parameter.
+The choice between overloading and overriding depends on the specific requirements of the code.
+
+
+
+
+
+
+
+
+

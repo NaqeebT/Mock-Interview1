@@ -1,0 +1,30 @@
+What types of Variables do we have in JAVA? Define all of them and explain the differences?
+
+Variables in JAVA are containers for storing data values. There are two different types of
+Variables in JAVA. Primitive Data types, and, Reference Data types.
+
+1. Primitive Data types:
+
+There are 8 different types of Primitive Data types:
+
+A. Byte: Can hold the values of 127 up to -128, (8-bit Signed Integer).
+
+B. Short: Can hold the values of 32767 up to -32768, (16- bit signed Integer).
+
+C. Integer:      (32-bit Signed Integer).
+
+D. Long: Is used when the value is larger than an Integer, (64-bit singed Integer).
+
+E. Float: Is used instead of double to save memory in large Arrays, (32-bit singed Integer- Point numbers).
+
+F. Double: This is used as a default choice for decimal values, (64-bit floating- Point numbers).
+
+G. Char: This is a simple enumeration beginning with Zero, (16-bit Unicode characters).
+
+H. Boolean: They only represent one bit of information "True" or "False".
+
+2. Reference Data type:
+
+They are used to store memory addresses that point to the location of an object. Means, that the codes, identifiers,
+and categorical values that are not subject to change. They include, Classes, Interfaces, Arrays, and Enums.
+Object of these types Variables created by using the "new" keyword.

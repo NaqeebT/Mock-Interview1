@@ -1,0 +1,90 @@
+What is Abstraction? How can we achieve an Abstraction in JAVA? What is Interface?
+What is Abstract Class? Interface as Abstract Class?
+
+What is Abstraction?
+
+1. Something which is not clear or not complete. We use abstraction to create methods which are incomplete, meaning
+they do not have a body. They only have method headers.
+
+2. The process of hiding certain details and showing only essential information to the user.
+
+3. The quality of dealing with ideas rather than events.
+
+__________________________________________________________________________________________________________________
+How can we achieve an Abstraction in JAVA?
+
+
+
+
+______________________________________________________________________________________________________________________
+What is Interface?
+
+Is something that is common in two systems. It is like a contract that help us know what type of methods should be
+present in a class for that class to be able to work with other classes.
+
+____________________________________________________________________________________________________________________
+What is Abstract Class? Interface vs Abstract Class?
+
+
+In Java, an abstract class is a class that cannot be instantiated on its own and is meant to be subclassed by other classes.
+It can have abstract methods (methods without a body) that must be implemented by its subclasses.
+Abstract classes can also have concrete (non-abstract) methods with a defined implementation.
+Abstract classes provide a way to define a common interface for a group of related classes while allowing
+some degree of implementation in the abstract class itself.
+
+Here's an example of an abstract class in Java:
+
+
+abstract class Shape {
+    abstract void draw(); // Abstract method
+
+    void display() {
+        System.out.println("Displaying the shape.");
+    }
+}
+In this example, the Shape class has an abstract method draw() and a concrete method display().
+Subclasses of Shape must provide an implementation for the draw() method.
+
+On the other hand, an interface in Java is a collection of abstract methods.
+In contrast to abstract classes, interfaces can't have any method implementations.
+All methods declared in an interface are implicitly public, abstract, and cannot have a method body.
+Java allows a class to implement multiple interfaces, providing a way to achieve multiple inheritance.
+
+Here's an example of an interface in Java:
+
+
+interface Drawable {
+    void draw();
+}
+
+interface Displayable {
+    void display();
+}
+A class can implement multiple interfaces:
+
+
+class Circle implements Drawable, Displayable {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle.");
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Displaying the circle.");
+    }
+}
+In summary, an abstract class allows for a combination of abstract and concrete methods and supports
+the concept of a base class, while an interface is a pure abstraction with only abstract methods and
+is used to define a contract for classes to implement.
+Java supports multiple interface implementation but only single class inheritance, which means a class
+can extend only one abstract class.
+
+
+__________________________________________________________________________________________________________________
+Why we should create Abstract Methods?
+
+1. When we know that every child will be overriding a method we do not need to have a method body.
+2. It acts as a template when we create a method as abstract every child must provide body for that.
+It is used to enforce methods on the child classes.
+
